@@ -11,8 +11,8 @@ function Nav() {
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <section className="nav" id="nav">
-            <header className="nav-wrapper">
+        <header className="nav-shell">
+            <div className="nav-wrapper">
                 <nav className="nav-pill">
                     <a href="#hero" className="nav-logo" onClick={closeMenu}>
                         HMW
@@ -42,7 +42,7 @@ function Nav() {
                         </a>
 
                         <a 
-                            href="www.linkedin.com/in/holland-m-wesley-6a7040400"
+                            href="https://www.linkedin.com/in/holland-m-wesley-6a7040400"
                             target="_blank"
                             rel="noreferrer"
                             className="nav-icon"
@@ -93,7 +93,7 @@ function Nav() {
                             </a>
                             
                             <a 
-                                href="www.linkedin.com/in/holland-m-wesley-6a7040400"
+                                href="https://www.linkedin.com/in/holland-m-wesley-6a7040400"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="nav-icon"
@@ -112,8 +112,8 @@ function Nav() {
                         </div>
                     </div>
                 )}
-            </header>
-        </section>
+            </div>
+        </header>
     );
 }
 
