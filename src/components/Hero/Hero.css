@@ -1,0 +1,322 @@
+.hero { 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100svh;
+    padding: 3rem 1.5rem 2rem;
+    overflow: clip;
+    position: relative;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(46, 204, 113, 0.08), transparent 20%),
+        radial-gradient(circle at 80% 15%, rgba(0, 170, 255, 0.08), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(130, 80, 255, 0.08), transparent 28%);
+    pointer-events: none;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.availability-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 999px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.availability-badge::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    border-radius: inherit;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 300deg,
+        rgba(50, 213, 131, 0.95) 330deg,
+        rgba(130, 255, 180, 0.65) 345deg,
+        transparent 360deg
+    );
+    animation: spinBorder 2.2s linear infinite;
+    z-index: -2;
+}
+
+
+.availability-badge::after {
+    content: "";
+    position: absolute;
+    inset: 1.5px;
+    border-radius: inherit;
+    background: rgba(12, 16, 14, 0.95);
+    z-index: -1;
+}
+
+.availability-dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #32d583;
+    box-shadow:
+        0 0 0 4px rgba(50, 213, 131, 0.14),
+        0 0 18px rgba(50, 213, 131, 0.75);
+    animation: pulseDot 1.8s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+.availability-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.0em;
+    color: #d7ffe8;
+}
+
+.hero-name {
+    margin: 0 0 1rem;
+    font-size: clamp(3.2rem, 9vw, 7rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-wrap: balance;
+    background: linear-gradient(
+        180deg, 
+        #ffffff 0%, 
+        #d9d9df 55%, 
+        #7a7a85 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 1rem;
+}
+
+.hero-title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+}
+
+.hero-tagline {
+    margin: 0 auto 1.25rem;
+    max-width: 760px;
+    font-size: clamp(1.08rem, 2.1vw, 1.45rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-description { 
+    margin: 0 auto 2.5rem;
+    max-width: 720px;
+    font-size: clamp(1.1rem, 1.7vw 1.12rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-button {
+    border: none;
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.hero-button-primary {
+    background: #ffffff;
+    color: #050505;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+}
+
+.hero-button-primary:hover {
+    background: #f2f2f2;
+}
+
+.hero-button-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16)
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 7rem;
+    transform: translateX(-50%);
+}
+
+.scroll-mouse {
+    width: 1.7rem;
+    height: 2.8rem;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.45rem;
+}
+
+.scroll-wheel {
+    width: 0.22rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+@keyframes spinBorder {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseDot {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.85;
+    }
+}
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+    .hero { 
+        min-height: auto;
+        padding: 2rem 1.25rem 3.5rem;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        max-width: 540px;
+    }
+
+    .availability-badge {
+        margin-bottom: 1.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .availability-text {
+        font-size: 0.88rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2.5rem, 12vw, 4.4rem);
+        line-height: 0.98;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 7vw, 2.4rem);
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-button { 
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .hero-scroll-indicator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero-content {
+        padding-top: 0.75rem;
+    }
+
+    .availability-badge {
+        gap: 0.55rem;
+    }
+
+    .availability-dot {
+        width: 0.62rem;
+        height: 0.62rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2.2rem, 13vw, 3.5rem);
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+    }
+
+    .hero-description {
+        max-width: 30ch;
+    }
+
+    .hero-button {
+        padding: 0.95rem 1.25rem;
+        border-radius: 14px;
+    }
+}
