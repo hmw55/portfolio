@@ -32,25 +32,6 @@
         0 0 30px rgba(111, 66, 193, 0.12);
 }
 
-/* .nav-pill::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(
-        90deg,
-        rgba(130, 80, 255, 0.7),
-        rgba(0, 200, 255, 0.5),
-        rgba(255, 255, 255, 0.18)
-    );
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: unset;
-    mask-composite: exclude;
-    pointer-events: none;
-} */
 
 .nav-logo {
     justify-self: start;
