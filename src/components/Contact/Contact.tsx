@@ -35,16 +35,40 @@ function Contact() {
         }));
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        // Replace with "/api/contact" later
-        setStatus(
-            "Thanks — this form is ready. Direct site sending will be connected after deployment."
-        );
+        try {
 
-        setForm(initialFormState);
-    }
+            setStatus("Sending message...");
+
+            const response = await fetch("/api/contact", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                },
+
+                body: JSON.stringify(form),
+            });
+
+            if(!response.ok) {
+                throw new Error("Failed to send");
+            }
+
+            setStatus("Message sent successfully.");
+
+            setForm(initialFormState);
+        } catch (error) {
+
+            console.error(error);
+
+            setStatus(
+                "Something went wrong. Please email me directly instead."
+            );
+        }
+    };
+
     return (
         <section className="contact" id="contact">
             <div className="contact-container">
