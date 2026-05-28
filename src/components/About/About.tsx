@@ -58,8 +58,8 @@ function About() {
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <p className="about-eyebrow">About Me</p>
-                    <h2>Building Software with structure, polish, and purpose.</h2>
+                    <p className="eyebrow">About Me</p>
+                    <h2 className="section-heading">Building Software with structure, polish, and purpose.</h2>
                 </motion.div>
 
                 <div className="about-main">

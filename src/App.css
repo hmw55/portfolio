@@ -1,9 +1,11 @@
 #root {
   min-height: 100vh;
+  width: 100%;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding: 4rem;
 }
 
 body {
@@ -11,12 +13,42 @@ body {
 }
 
 .app {
-  background: #000;
+  background: 
+    radial-gradient(circle at top left, rgba(126, 87, 255, 0.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(0, 174, 255, 0.1), transparent 26%),
+    linear-gradient(180deg, #040404 0%, #09090d 100%);
   color: #fff;
   min-height: 100vh;
   width: 100%;
-  display: flex;
-  overflow-x: hidden;
 }
 
+.site-main {
+  position: relative;
+  z-index: 1;
+}
 
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+      radial-gradient(circle at 15% 15%, rgba(50, 213, 131, 0.08), transparent 24%),
+      radial-gradient(circle at 85% 35%, rgba(111, 66, 193, 0.12), transparent 26%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #32d583;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
