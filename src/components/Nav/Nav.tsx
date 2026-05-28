@@ -52,7 +52,7 @@ function Nav() {
                         </a>
 
                         <a 
-                            href="mailto:hello@hollandmwesley.com"
+                            href="mailto:holland@hollandmwesley.com"
                             className="nav-icon"
                             aria-label="Email"
                         >

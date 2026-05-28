@@ -52,7 +52,7 @@ function About() {
         <section className="about" id="about">
             <div className="about-container">
                 <motion.div
-                    className="about-header"
+                    className="about-header section-header"
                     initial={{ opacity: 0, y:24 }}
                     whileInView={{ opacity: 1, y:0 }}
                     viewport={{ once: true, amount: 0.35 }}

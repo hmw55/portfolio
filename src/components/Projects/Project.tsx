@@ -5,7 +5,6 @@ import corelatoImage from "../../assets/corelato-screenshot.png";
 import jssImage from "../../assets/jss-screenshot.png";
 import GitHubLogo from "../../assets/GitHub_Invertocat_White_Clearspace.svg";
 import "./Projects.css";
-import { span } from "motion/react-client";
 
 type Project = {
     title: string;
@@ -51,7 +50,7 @@ function Projects() {
         <section className="projects" id="projects">
             <div className="projects-container">
                 <motion.div
-                    className="projects-header"
+                    className="projects-header section-header"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}

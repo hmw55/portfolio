@@ -49,15 +49,15 @@ function Contact() {
         <section className="contact" id="contact">
             <div className="contact-container">
                 <motion.div
-                    className="section-heading"
+                    className="section-header contact-header"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.35 }}
                     transition={{ duration: 0.6 }}
                 >
                     <p className="eyebrow">Contact</p>
-                    <h2>Let's build something worth shipping.</h2>
-                    <p>
+                    <h2 className="section-heading">Let's build something worth shipping.</h2>
+                    <p className="section-subtitle">
                         Have a role, project, or collaboration in mind? Send a message 
                         here or email me directly.
                     </p>

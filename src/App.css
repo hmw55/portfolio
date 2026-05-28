@@ -27,14 +27,10 @@ body {
   z-index: 1;
 }
 
-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-      radial-gradient(circle at 15% 15%, rgba(50, 213, 131, 0.08), transparent 24%),
-      radial-gradient(circle at 85% 35%, rgba(111, 66, 193, 0.12), transparent 26%);
-  pointer-events: none;
+.section-header {
+  max-width: 820px;
+  margin: 0 auto 3rem;
+  text-align: center;
 }
 
 .eyebrow {
@@ -44,6 +40,7 @@ section::before {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .section-heading {
@@ -51,4 +48,13 @@ section::before {
   font-size: clamp(2.2rem, 5vw, 4.5rem);
   line-height: 1;
   letter-spacing: -0.05em;
+  text-align: center;
+}
+
+.section-subtitle {
+  margin: 1rem auto 0;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 1.5rem;
+  line-height: 1.7;
 }

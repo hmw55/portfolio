@@ -1,0 +1,115 @@
+.footer {
+    position: relative;
+    padding: 3rem 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.footer-content {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 1.25rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer-links a,
+.footer-email {
+    color: rgba(255, 255, 255, 0.68);
+    text-decoration: none;
+    transition: color 0.2 ease, transform 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-email:hover {
+    color: #ffffff;
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    word-break: break-word;
+}
+
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.footer-social-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #ffffff;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 
+        background 0.2s ease,
+        color 0.2s ease, 
+        transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+    background: rgba(255, 255, 255, 0.09);
+    transform: translateY(-2px);
+}
+
+.footer-socials img {
+    width: 1.15rem;
+    height: 1.15rem;
+    object-fit: contain;
+}
+
+.linkedin-logo {
+    height: 1rem !important;
+    width: 1rem !important;
+}
+
+.footer-copy {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.44);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* === MEDIA === */
+
+@media (max-width: 520px) {
+    .footer {
+        padding: 2.5rem 1rem 1.75rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-email {
+        font-size: 0.9rem;
+    }
+}
