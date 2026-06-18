@@ -23,13 +23,9 @@ const projects: Project[] = [
         stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "TipTap", "Tailwind", "Vercel"],
         siteUrl: "https://corelato.com",
         details: [
-            "Corelato is a learning platform designed to help students and lifelong learners organize, connect, and retain knowledge through courses, notes, flashcards, and study tools.",
-            "The project originally began as my B.S. Software Engineering capstone, where I built a prototype using React, Spring Boot, and PostgreSQL.",
-            "Through that experience, I learned a tremendous amount about full-stack development, product design, and the challenges of building software that people actually want to use.",
-            "After graduating, I began rebuilding the platform from the ground up as a Corelato V1 using Next.js, TypeScript, Supabase, and PostgreSQL.",
-            "The new architecture focuses on scalability, developer experience, and a more polished user experience.",
-            "Today, Corelato includes authentication, rich-text note editing, public and private knowledge sharing, public learner profiles, course organization, flashcard decks, and SEO-friendly public notes.",
-            "The long-term vision is to create a platform that helps learners not only store information, but actively connect ideas and retain knowledge more effectively.",
+            "Corelato is a learning platform designed to help learners organize, connect, and retain knowledge through courses, notes, flashcards, and study tools.",
+            "The project began as my B.S. Software Engineering capstone, where I built a prototype using React, Spring Boot, and PostgreSQL. After graduation, I rebuilt the platform using Next.js, TypeScript, Supabase, and PostgreSQL to create a more scalable and polished foundation.",
+            "The current platform includes authentication, rich-text notes, public profiles, flashcard decks, course organization, and SEO-friendly public content. Long-term, I plan to expand Corelato into a comprehensive learning and knowledge-retention platform.",
         ],
     },
     {
@@ -39,12 +35,9 @@ const projects: Project[] = [
         stack: ["Next.js", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Supabase", "Tailwind"],
         siteUrl: "https://jobsearchingsucks.com",
         details: [
-            "JobSearchingSucks is a job search management platform built to help users organize applications, track progress, and stay focused during the often overwhelming process of finding a new role.",
-            "The project was inspired by my own experience applying to software engineering positions after graduation.",
-            "Existing tools were either overly complex, abandoned, or focused on enterprise recruiting rather than helping individual job seekers stay organized.",
-            "The application uses a modern full-stack architecture with a Next.js frontend, FastAPI backend, PostgreSQL database, and SQLAlchemy ORM.",
-            "The platform currently focuses on application tracking, status management, resume organization foundations, and dashboard analytics.",
-            "As the project grows, I plan to expand into a more complete career management platform while maintaining a strong focus on privacy, user trust, and responsible handling of personal data.",
+            "JobSearchingSucks is a job search management platform built to help users organize applications, track progress, and stay focused during the hiring process.",
+            "The application uses a Next.js frontend, FastAPI backend, PostgreSQL database, and SQLAlchemy ORM. It currently focuses on application tracking, status management, resume organization foundations, and analytics.",
+            "Future development will expand the platform into a broader career management tool while maintaining a strong focus on privacy, trust, and responsible handling of personal data.",
         ],
     },
 ];
