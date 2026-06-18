@@ -13,38 +13,44 @@ type Project = {
     stack: string[];
     siteUrl: string;
     details: string[];
-}
+};
 
 const projects: Project[] = [
     {
         title: "Corelato",
-        subtitle: "Learning productivity platform",
+        subtitle: "Learning platform for notes, courses, flashcards, and public knowledge sharing",
         image: corelatoImage,
-        stack: ["React", "Spring Boot", "PostgreSQL", "Vercel", "Railway"],
+        stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "TipTap", "Tailwind", "Vercel"],
         siteUrl: "https://corelato.com",
         details: [
-            "Corelato started as my B.S. in Software engineering capstone. It began as a self-paced learning productivity app focused on helping learners organize courses, milestones, notes, flashcards, and study sessions.",
-            "V2 is currently in development to expand the product beyond self-paced learners and support all learners with a stronger course-centered experience.",
-            "Planned improvements include collaboration features, a redesigned UI, better learner workflows, and a more polished product experience.",
-            "The current public site is a landing page with a video walkthrough of V1.",
+            "Corelato is a learning platform designed to help students and lifelong learners organize, connect, and retain knowledge through courses, notes, flashcards, and study tools.",
+            "The project originally began as my B.S. Software Engineering capstone, where I built a prototype using React, Spring Boot, and PostgreSQL.",
+            "Through that experience, I learned a tremendous amount about full-stack development, product design, and the challenges of building software that people actually want to use.",
+            "After graduating, I began rebuilding the platform from the ground up as a Corelato V1 using Next.js, TypeScript, Supabase, and PostgreSQL.",
+            "The new architecture focuses on scalability, developer experience, and a more polished user experience.",
+            "Today, Corelato includes authentication, rich-text note editing, public and private knowledge sharing, public learner profiles, course organization, flashcard decks, and SEO-friendly public notes.",
+            "The long-term vision is to create a platform that helps learners not only store information, but actively connect ideas and retain knowledge more effectively.",
         ],
     },
     {
         title: "JobSearchingSucks",
-        subtitle: "Application tracking for the job search",
+        subtitle: "Job application tracker with resume management and analytics foundations",
         image: jssImage,
-        stack: ["Next.js", "FastAPI", "PostgreSQL", "Supabase", "Tailwind", "Vercel"],
+        stack: ["Next.js", "TypeScript", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "Supabase", "Tailwind"],
         siteUrl: "https://jobsearchingsucks.com",
         details: [
-            "JobSearchingSucks is a job-search organization tool focused first on application tracking, status updates, and keeping momentum during the job hunt.",
-            "The current scope intentionally stays focused on application tracking while I work through privacy, resume-data handling, and payment/card-processing requirements.",
-            "Before expanding into resume storage, sensitive user data, or paid features, I want the product foundation to handle trust, data safety, and compliance responsibility.",
+            "JobSearchingSucks is a job search management platform built to help users organize applications, track progress, and stay focused during the often overwhelming process of finding a new role.",
+            "The project was inspired by my own experience applying to software engineering positions after graduation.",
+            "Existing tools were either overly complex, abandoned, or focused on enterprise recruiting rather than helping individual job seekers stay organized.",
+            "The application uses a modern full-stack architecture with a Next.js frontend, FastAPI backend, PostgreSQL database, and SQLAlchemy ORM.",
+            "The platform currently focuses on application tracking, status management, resume organization foundations, and dashboard analytics.",
+            "As the project grows, I plan to expand into a more complete career management platform while maintaining a strong focus on privacy, user trust, and responsible handling of personal data.",
         ],
     },
 ];
 
 function Projects() {
-    const [selectedProject, setSelectedProject]=useState<Project | null>(null);
+    const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
         <section className="projects" id="projects">
@@ -66,13 +72,13 @@ function Projects() {
                             className="project-card"
                             key={project.title}
                             initial={{ opacity: 0, y: 24 }}
-                            whileInView={{ opacity: 1, y:0 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.25 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
                             <div className="project-image-wrap">
-                                <img 
-                                    src={project.image} 
+                                <img
+                                    src={project.image}
                                     alt={`${project.title} screenshot`}
                                     className="project-image"
                                 />
@@ -84,7 +90,7 @@ function Projects() {
                                         <h3>{project.title}</h3>
                                         <p>{project.subtitle}</p>
                                     </div>
-                                    
+
                                     <button
                                         type="button"
                                         className="project-info-button"
@@ -118,35 +124,35 @@ function Projects() {
                 <motion.div
                     className="github-callout"
                     initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y:0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.25 }}
                     transition={{ duration: 0.6 }}
                 >
                     <div>
                         <h3>More on GitHub</h3>
                         <p>
-                            I also build smaller tools and automation projects, including 
-                            Job Radar and a DMV appointment watcher.
+                            I also build smaller tools and automation projects, including Job Radar,
+                            a Python-based job aggregation tool, and a DMV appointment watcher.
                         </p>
                     </div>
 
-                    <a 
+                    <a
                         href="https://github.com/hmw55"
                         target="_blank"
                         rel="noreferrer"
                         className="github-link"
                     >
                         View on GitHub
-                        <img src={GitHubLogo} alt="Github Logo" />
+                        <img src={GitHubLogo} alt="GitHub logo" />
                     </a>
                 </motion.div>
             </div>
 
             <AnimatePresence>
-                {selectedProject &&(
+                {selectedProject && (
                     <motion.div
                         className="project-modal-backdrop"
-                        onClick={() => event?.stopPropagation()}
+                        onClick={() => setSelectedProject(null)}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -177,7 +183,7 @@ function Projects() {
                                 ))}
                             </div>
 
-                            <a 
+                            <a
                                 href={selectedProject.siteUrl}
                                 target="_blank"
                                 rel="noreferrer"
@@ -188,7 +194,6 @@ function Projects() {
                             </a>
                         </motion.div>
                     </motion.div>
-
                 )}
             </AnimatePresence>
         </section>

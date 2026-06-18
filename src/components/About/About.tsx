@@ -32,7 +32,7 @@ function About() {
     const stackGroups = [
         {
             title: "Frontend",
-            skills: ["React", "TypeScript", "JavaScript", "CSS", "TailwindCSS", "Responsive UI"], 
+            skills: ["React", "Next.js", "TypeScript", "JavaScript", "CSS", "Tailwind CSS", "Responsive UI"], 
         },
         {
             title: "Backend",
