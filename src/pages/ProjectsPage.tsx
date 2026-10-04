@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
@@ -42,6 +42,18 @@ function ProjectsPage() {
 
     return matchesCategory && matchesLanguage;
   });
+
+  useEffect(() => {
+    if (!window.location.hash) return;
+
+    const id = window.location.hash.slice(1);
+    const element = document.getElementById(id);
+
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  }, []);
 
   return (
     <>
@@ -123,6 +135,7 @@ function ProjectsPage() {
           <section className="projects-grid">
             {filteredProjects.map((project) => (
                 <article
+                  id={project.slug}
                   className="project-card"
                   key={project.slug}
                 >
