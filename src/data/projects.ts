@@ -85,6 +85,7 @@ export const projects: Project[] = [
     caseStudy: false,
     featured: true,
     status: "In Development",
+    liveUrl: "https://jobsearchingsucks.com"
   },
   {
     slug: "corelato",
@@ -106,6 +107,7 @@ export const projects: Project[] = [
     caseStudy: false,
     featured: true,
     status: "Live",
+    liveUrl: "https://corelato.com",
   },
   {
     slug: "worldscope",
@@ -151,6 +153,7 @@ export const projects: Project[] = [
     ],
     languages: ["Python"],
     categories: ["Backend", "Automation"],
+    githubUrl: "https://github.com/hmw55/co-dmv-appointment-watcher",
   },
   {
     slug: "warehouse-operations-engine",
@@ -181,6 +184,7 @@ export const projects: Project[] = [
     ],
     languages: ["Python", "SQL"],
     categories: ["Backend", "Automation"],
+    githubUrl: "https://github.com/hmw55/job-radar",
   },
   {
     slug: "avarra",
@@ -196,6 +200,7 @@ export const projects: Project[] = [
     languages: ["Java", "TypeScript", "SQL"],
     categories: ["Full Stack"],
     status: "In Development",
+    githubUrl: "https://github.com/hmw55/avarra",
   },
 ];
 
