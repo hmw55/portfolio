@@ -1,35 +1,62 @@
 .contact {
-    position: relative;
-    padding: 7rem 1.5rem;
-    overflow: hidden;
+  position: relative;
+  padding: 8rem 1.5rem;
+  overflow: hidden;
 }
 
 .contact-container {
-    position: relative;
-    z-index: 1;
-    width: min (1200px, 100%);
-    margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 100%);
+  margin: 0 auto;
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
-    gap: 1.25rem;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .contact-form,
 .contact-card {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.045);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-radius: 28px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 24px;
 }
 
 .contact-form {
-    padding: 1.4rem;
+  padding: 2rem;
+}
+
+.contact-header {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.contact-header .eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #32d583;
+}
+
+.contact-header .section-heading {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.75rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact-header .section-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-row {
@@ -108,11 +135,11 @@
 }
 
 .contact-card {
-    padding: 1.4rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .contact-card-icon {

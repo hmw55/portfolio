@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
 
@@ -42,16 +43,18 @@ function Hero() {
                     </p>
 
                     <div className="hero-actions">
-                        <motion.button
-                            type="button"
-                            className="hero-button hero-button-primary"
-                            onClick={() => scrollToSection("projects")}
+                        <motion.div
                             whileHover={{ scale: 1.02, y: -2 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            <span>View Projects</span>
-                            <ArrowRight size={20} />
-                        </motion.button>
+                            <Link
+                                to="/projects"
+                                className="hero-button hero-button-primary"
+                            >
+                                <span>View Projects</span>
+                                <ArrowRight size={20} />
+                            </Link>
+                        </motion.div>
 
                         <motion.button
                             type="button"
